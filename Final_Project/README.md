@@ -35,6 +35,11 @@ DriveWise is a Retrieval-Augmented Generation (RAG) based automotive assistant t
 ## RAG Workflow
 
 PDF Brochures → Text Extraction → Chunking → Embeddings → FAISS → Metadata Filtering → Re-ranking → Context Control → Gemini → Answer + Sources
+## Live Demo
+
+Try the deployed application on Streamlit:
+
+[Launch DriveWise](https://uditguptajecrcfoundationcei-er68zm6amacnqs8e6z7bzn.streamlit.app/)
 
 ## Author
 
