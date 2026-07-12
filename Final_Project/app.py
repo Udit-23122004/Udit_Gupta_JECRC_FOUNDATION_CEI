@@ -21,18 +21,22 @@ st.set_page_config(
 BASE_DIR = Path(__file__).resolve().parent
 FAISS_PATH = BASE_DIR / "drivewise_faiss"
 # Models
+
+BASE_DIR = Path(__file__).resolve().parent
+FAISS_PATH = BASE_DIR / "drivewise_faiss"
+
+
 @st.cache_resource
 def load_models():
-
     embedding_model = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2"
     )
 
-   vector_store = FAISS.load_local(
-    str(FAISS_PATH),
-    embedding_model,
-    allow_dangerous_deserialization=True
-)
+    vector_store = FAISS.load_local(
+        str(FAISS_PATH),
+        embedding_model,
+        allow_dangerous_deserialization=True
+    )
 
     reranker = CrossEncoder(
         "cross-encoder/ms-marco-MiniLM-L-6-v2"
