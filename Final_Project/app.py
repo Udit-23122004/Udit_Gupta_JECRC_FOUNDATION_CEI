@@ -19,7 +19,7 @@ st.set_page_config(
 )
 
 BASE_DIR = Path(__file__).resolve().parent
-FAISS_PATH = BASE_DIR / "drivewise_faiss"=
+FAISS_PATH = BASE_DIR / "drivewise_faiss"
 # Models
 @st.cache_resource
 def load_models():
